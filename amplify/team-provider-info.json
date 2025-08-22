@@ -19,5 +19,26 @@
         "kirocrm": {}
       }
     }
+  },
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-kirocrm-main-5a823-authRole",
+      "UnauthRoleArn": "arn:aws:iam::355511498368:role/amplify-kirocrm-main-5a823-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::355511498368:role/amplify-kirocrm-main-5a823-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-kirocrm-main-5a823-deployment",
+      "UnauthRoleName": "amplify-kirocrm-main-5a823-unauthRole",
+      "StackName": "amplify-kirocrm-main-5a823",
+      "StackId": "arn:aws:cloudformation:us-east-1:355511498368:stack/amplify-kirocrm-main-5a823/9b8c9af0-7f80-11f0-bbff-0affd4c8541f",
+      "AmplifyAppId": "d17kq052b36x5m"
+    },
+    "categories": {
+      "auth": {
+        "kirocrm77b82e10": {}
+      },
+      "api": {
+        "kirocrm": {}
+      }
+    }
   }
 }
