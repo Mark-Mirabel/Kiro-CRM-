@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-kirocrm-dev-597a6-authRole",
+      "UnauthRoleArn": "arn:aws:iam::355511498368:role/amplify-kirocrm-dev-597a6-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::355511498368:role/amplify-kirocrm-dev-597a6-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-kirocrm-dev-597a6-deployment",
+      "UnauthRoleName": "amplify-kirocrm-dev-597a6-unauthRole",
+      "StackName": "amplify-kirocrm-dev-597a6",
+      "StackId": "arn:aws:cloudformation:us-east-1:355511498368:stack/amplify-kirocrm-dev-597a6/0aff5a50-7f7a-11f0-b8e0-0affe1a46c7d",
+      "AmplifyAppId": "d17kq052b36x5m"
+    },
+    "categories": {
+      "auth": {
+        "kirocrm77b82e10": {}
+      },
+      "api": {
+        "kirocrm": {}
+      }
+    }
+  }
+}

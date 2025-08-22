@@ -1,0 +1,65 @@
+# CRM GraphQL Schema
+
+type Contact @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  phone: String
+  company: String
+  position: String
+  notes: String
+  activities: [Activity] @hasMany(indexName: "byContact", fields: ["id"])
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Lead @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  phone: String
+  company: String
+  status: LeadStatus!
+  source: String
+  value: Float
+  notes: String
+  activities: [Activity] @hasMany(indexName: "byLead", fields: ["id"])
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Activity @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  type: ActivityType!
+  title: String!
+  description: String
+  dueDate: AWSDateTime
+  completed: Boolean!
+  contactID: ID @index(name: "byContact")
+  contact: Contact @belongsTo(fields: ["contactID"])
+  leadID: ID @index(name: "byLead")
+  lead: Lead @belongsTo(fields: ["leadID"])
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPOSAL
+  NEGOTIATION
+  CLOSED_WON
+  CLOSED_LOST
+}
+
+enum ActivityType {
+  CALL
+  EMAIL
+  MEETING
+  TASK
+  NOTE
+}
+
